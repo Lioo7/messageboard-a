@@ -18,35 +18,37 @@ Board board_3; // Initializes an empty board for the third scenario
 TEST_CASE("Checks the post and read functions - Vertical")
 {
     /* Direction: Vertical */
-    board.post(0, 0, Direction::Vertical, "Checks the post and read functions");
+    board.post(0, 0, Direction::Vertical, "Checks the post and read functions on a filled board");
 
     /* Assert True */
     CHECK(board.read(0, 0, Direction::Vertical, 6) == "Checks");
     CHECK(board.read(7, 0, Direction::Vertical, 3) == "the");
     CHECK(board.read(11, 0, Direction::Vertical, 4) == "post");
     CHECK(board.read(16, 0, Direction::Vertical, 3) == "and");
-    CHECK(board.read(20, 0, Direction::Vertical, 8) == "function");
-    CHECK(board.read(29, 0, Direction::Vertical, 2) == "on");
-    CHECK(board.read(32, 0, Direction::Vertical, 1) == "a");
-    CHECK(board.read(34, 0, Direction::Vertical, 6) == "filled");
-    CHECK(board.read(41, 0, Direction::Vertical, 5) == "board");
+    CHECK(board.read(20, 0, Direction::Vertical, 4) == "read");
+    CHECK(board.read(25, 0, Direction::Vertical, 9) == "functions");
+    CHECK(board.read(35, 0, Direction::Vertical, 2) == "on");
+    CHECK(board.read(38, 0, Direction::Vertical, 1) == "a");
+    CHECK(board.read(40, 0, Direction::Vertical, 6) == "filled");
+    CHECK(board.read(47, 0, Direction::Vertical, 5) == "board");
 }
 
 TEST_CASE("Checks the post and read functions - Horizontal")
 {
     /* Direction: Horizontal */
-    board.post(0, 0, Direction::Horizontal, "Checks the post and read functions");
+    board.post(0, 0, Direction::Horizontal, "Checks the post and read functions on a filled board");
 
     /* Assert True */
     CHECK(board.read(0, 0, Direction::Horizontal, 6) == "Checks");
     CHECK(board.read(0, 7, Direction::Horizontal, 3) == "the");
     CHECK(board.read(0, 11, Direction::Horizontal, 4) == "post");
     CHECK(board.read(0, 16, Direction::Horizontal, 3) == "and");
-    CHECK(board.read(0, 15, Direction::Horizontal, 8) == "function");
-    CHECK(board.read(0, 24, Direction::Horizontal, 2) == "on");
-    CHECK(board.read(0, 27, Direction::Horizontal, 1) == "a");
-    CHECK(board.read(0, 29, Direction::Horizontal, 6) == "filled");
-    CHECK(board.read(0, 35, Direction::Horizontal, 5) == "board");
+    CHECK(board.read(0, 20, Direction::Horizontal, 4) == "read");
+    CHECK(board.read(0, 25, Direction::Horizontal, 9) == "functions");
+    CHECK(board.read(0, 35, Direction::Horizontal, 2) == "on");
+    CHECK(board.read(0, 38, Direction::Horizontal, 1) == "a");
+    CHECK(board.read(0, 40, Direction::Horizontal, 6) == "filled");
+    CHECK(board.read(0, 47, Direction::Horizontal, 5) == "board");
 }
 
 TEST_CASE("Checks the read function on an empty board - Vertical")
