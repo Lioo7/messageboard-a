@@ -20,6 +20,8 @@ Board() {
 }
 void post(uint row, uint column, Direction direction, string text);
 string read(uint row, uint column, Direction direction, uint length);
+// bool checkSize(uint row, uint column);
+void boardResize(uint row, uint column);
 void show();
 };
 
